@@ -6,14 +6,14 @@
     "lib": ["esnext", "dom"],
     "declaration": false,
     "allowJs": true,
-    "importHelpers": true
+    "importHelpers": true,
+    "noImplicitAny": true
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
     "**/node_modules/**",
-    "**/__tests__/**",
-    "**/*.test.js"
+    "**/__tests__/**"
   ]
 }
