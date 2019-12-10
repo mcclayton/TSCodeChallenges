@@ -9,6 +9,12 @@ build errors as you go with:
 yarn build:watch
 ```
 
+
+To dyamically generate the solutions table and add it to the README, run:
+```
+yarn build:readme
+```
+
 ## Tests
 Each solution should have its own tests to verify the integrity of the solution.
 To run the test suite, run:
