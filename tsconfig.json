@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es2018",
+    "lib": ["esnext", "dom"],
+    "declaration": false,
+    "allowJs": true,
+    "importHelpers": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "**/node_modules/**",
+    "**/__tests__/**",
+    "**/*.test.js"
+  ]
+}
