@@ -19,6 +19,6 @@ yarn test
 
 # Solutions
 
-| Solutions |
-|:---------:|
-| [LeftRotation](https://github.com/mcclayton/TSCodeChallenges/tree/master/./src/LeftRotation/index.ts) |
+| Name | Solution |
+|:---------:|:---------:|
+| LeftRotation | [Solution](https://github.com/mcclayton/TSCodeChallenges/tree/master/./src/LeftRotation/index.ts) |
