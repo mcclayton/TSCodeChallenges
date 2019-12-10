@@ -1,7 +1,7 @@
 # TSCodeChallenges
 Code challenges / solutions implemented in Typescript.
 
-# Build
+## Build
 When writing new solutions, it is helpful to build in watch mode to catch any
 build errors as you go with:
 
@@ -9,7 +9,7 @@ build errors as you go with:
 yarn build:watch
 ```
 
-# Tests
+## Tests
 Each solution should have its own tests to verify the integrity of the solution.
 To run the test suite, run:
 
@@ -17,8 +17,8 @@ To run the test suite, run:
 yarn test
 ```
 
-# Solutions
+## Solutions
 
-| Name | Solution |
+| Solution | Description |
 |:---------:|:---------:|
-| LeftRotation | [Solution](https://github.com/mcclayton/TSCodeChallenges/tree/master/./src/LeftRotation/index.ts) |
+| [LeftRotation](https://github.com/mcclayton/TSCodeChallenges/tree/master/./src/LeftRotation/index.ts) | Given an array of `n` integers and a number, `d`, perform `d` left rotations on the array. |
