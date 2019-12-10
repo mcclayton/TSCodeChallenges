@@ -14,7 +14,7 @@ find ./src -type f -name "index.ts" | while read path; do
   SOLUTION_PATH="$GITHUB_ROOT/$path"
   DIRECTORY_PATH="$(dirname $path)"
   DIRECTORY_NAME="$(basename "$DIRECTORY_PATH")"
-  DESCRIPTION="$(cat $DIRECTORY_PATH/$DESCRIPTION_FILENAME)"
+  DESCRIPTION="$(cat $DIRECTORY_PATH/$DESCRIPTION_FILENAME 2>/dev/null)"
   echo "| [$DIRECTORY_NAME]($SOLUTION_PATH) | $DESCRIPTION |" >> README.md
 done
 

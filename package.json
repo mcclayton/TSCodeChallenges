@@ -21,6 +21,7 @@
     "typescript": "3.7.3"
   },
   "scripts": {
+    "build:readme": "./readme_gen/generate.sh",
     "clean": "rimraf coverage build tmp",
     "build": "tsc -p tsconfig.release.json",
     "build:watch": "tsc -w -p tsconfig.release.json",
