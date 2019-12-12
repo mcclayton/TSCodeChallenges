@@ -31,11 +31,13 @@ import { isLeaf, TreeNode } from './helpers';
  * @return {boolean}
  */
 const hasPathSum = function(root: TreeNode, sum: number) {
-  // If initial tree is empty, return
+  // If initial tree is empty, return false as there are no leaf nodes
   if (root == null)
     return false;
 
   let res = false;
+  // Perform a preorder traversal, passing the sum of the path-so-far down the
+  // path. Once we reach a leaf node, we update `res`.
   function preOrderTraverse(node: TreeNode, sumSoFar = 0) {
     if (node == null) {
       return;
@@ -44,9 +46,10 @@ const hasPathSum = function(root: TreeNode, sum: number) {
     sumSoFar += node.val;
     if (isLeaf(node)) {
       res = res || sum === sumSoFar;
+    } else {
+      preOrderTraverse(node.left, sumSoFar);
+      preOrderTraverse(node.right, sumSoFar);
     }
-    preOrderTraverse(node.left, sumSoFar);
-    preOrderTraverse(node.right, sumSoFar);
   }
 
   preOrderTraverse(root, 0);
