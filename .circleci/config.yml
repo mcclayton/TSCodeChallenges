@@ -2,7 +2,7 @@ version: 2
 jobs:
   test:
     docker:
-      - image: circleci/node:10.13.0
+      - image: circleci/node:lts
     environment:
       - NODE_ENV: development
     working_directory: ~/TSCodeChallenges
