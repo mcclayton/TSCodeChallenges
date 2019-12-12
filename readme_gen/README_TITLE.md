@@ -5,7 +5,7 @@ Code challenges / solutions implemented in Typescript.
 When writing new solutions, it is helpful to build in watch mode to catch any
 build errors as you go with:
 
-```bash
+```
 yarn build:watch
 ```
 
@@ -15,11 +15,11 @@ To dyamically generate the solutions table and add it to the README, run:
 yarn build:readme
 ```
 
-## Tests
+## Test
 Each solution should have its own tests to verify the integrity of the solution.
 To run the test suite, run:
 
-```bash
+```
 yarn test
 ```
 
