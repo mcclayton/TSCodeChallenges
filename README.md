@@ -1,7 +1,7 @@
 # TSCodeChallenges
-Code challenges / solutions implemented in Typescript.
-
 [![CircleCI](https://circleci.com/gh/mcclayton/TSCodeChallenges.svg?style=svg)](https://circleci.com/gh/mcclayton/TSCodeChallenges)
+
+Code challenges / solutions implemented in Typescript.
 
 ## Build
 When writing new solutions, it is helpful to build in watch mode to catch any
