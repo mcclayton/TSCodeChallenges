@@ -29,5 +29,6 @@ yarn test
 
 | Solution | Description |
 |:---------:|:---------:|
+| [LargestNumber](https://github.com/mcclayton/TSCodeChallenges/tree/master/./src/LargestNumber/index.ts) | Given a list of non negative integers, arrange them such that they form the largest number. |
 | [LeftRotation](https://github.com/mcclayton/TSCodeChallenges/tree/master/./src/LeftRotation/index.ts) | Given an array of `n` integers and a number, `d`, perform `d` left rotations on the array. |
 | [PathSum](https://github.com/mcclayton/TSCodeChallenges/tree/master/./src/PathSum/index.ts) | Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum. |
