@@ -1,6 +1,7 @@
 node_modules
 coverage
 build
+yarn-error.log
 
 ### macOS ###
 # General

@@ -5,7 +5,6 @@
  * Solution = 5 1 2 3 4
  */
 
-// O(n) time and O(1)
 const rotateLeft = (arr: number[], rotation: number) => {
   if (!arr || arr.length === 0)
     return arr;
