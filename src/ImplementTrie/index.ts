@@ -17,7 +17,7 @@ export default class Trie {
       if (!node.nodeMap[currLetter]) {
         // The letter is not present in the trie
         // create and add a new node
-        node.nodeMap[currLetter] = new Node();
+        node.nodeMap[currLetter] = new Node(currLetter);
       }
       // Traverse down to the next node
       node = node.nodeMap[currLetter];
