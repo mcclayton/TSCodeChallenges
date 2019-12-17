@@ -21,6 +21,7 @@
     "typescript": "3.7.3"
   },
   "scripts": {
+    "new": "node ./template/generate.js",
     "start": "yarn test && yarn build:readme",
     "build:readme": "./readme_gen/generate.sh",
     "clean": "rimraf coverage build tmp",
@@ -33,6 +34,9 @@
   "author": "Michael CLayton",
   "dependencies": {
     "@datastructures-js/stack": "1.0.2",
+    "fs-extra": "^8.1.0",
+    "inquirer": "^7.0.1",
+    "replace-in-file": "^5.0.2",
     "tslib": "~1.10.0"
   }
 }

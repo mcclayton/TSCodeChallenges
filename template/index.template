@@ -1,0 +1,8 @@
+/**
+ * {{name}}
+ */
+const {{name}} = function() {
+
+};
+
+export default {{name}};

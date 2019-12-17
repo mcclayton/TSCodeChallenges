@@ -25,6 +25,13 @@ To run the test suite, run:
 yarn test
 ```
 
+## Generate New Challenge
+You can bootstrap a new challenge directory structure and template files by running the generation script with:
+
+```
+yarn new
+```
+
 ## Solutions
 
 | Code | Description | Solution |
