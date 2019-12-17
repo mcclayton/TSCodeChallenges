@@ -36,6 +36,7 @@ yarn new
 
 | Code | Description | Solution |
 |:---------:|:---------:|:---------:|
+| [ArrayShuffle](https://github.com/mcclayton/TSCodeChallenges/tree/master/./src/ArrayShuffle/index.ts) | Shuffle a set of numbers without duplicates. | [Leetcode](https://leetcode.com/articles/shuffle-an-array/) |
 | [LargestNumber](https://github.com/mcclayton/TSCodeChallenges/tree/master/./src/LargestNumber/index.ts) | Given a list of non negative integers, arrange them such that they form the largest number. | [Leetcode](https://leetcode.com/articles/largest-number/) [GeeksforGeeks](https://www.geeksforgeeks.org/given-an-array-of-numbers-arrange-the-numbers-to-form-the-biggest-number/) |
 | [LeftRotation](https://github.com/mcclayton/TSCodeChallenges/tree/master/./src/LeftRotation/index.ts) | Given an array of `n` integers and a number, `d`, perform `d` left rotations on the array. |  |
 | [PathSum](https://github.com/mcclayton/TSCodeChallenges/tree/master/./src/PathSum/index.ts) | Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum. | [GeeksforGeeks](https://www.geeksforgeeks.org/root-to-leaf-path-sum-equal-to-a-given-number) |
