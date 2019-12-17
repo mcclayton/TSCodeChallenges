@@ -10,6 +10,8 @@ const shuffle = function(nums: number[]) {
   for (let i=0; i < nums.length; i++) {
     // Choose a random index from the current index (inclusively) to the
     // last index in the array. Swap the elements and increment the index.
+    // It is important to allow swapping with the same index or the randomness
+    // would not be even for the shuffle.
     const swapIdx = getRandomInt(i, nums.length - 1);
 
     // Swap the elements in the original array to accomplish this in-place and
