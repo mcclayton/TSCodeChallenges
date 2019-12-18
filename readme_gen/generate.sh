@@ -9,8 +9,8 @@ INFO_FILENAME="info.md"
 
 cat ./readme_gen/README_TITLE.md > README.md   # Add README_TITLE to README
 
-echo "| Code | Description | Solution |" >> README.md
-echo "|:---------:|:---------:|:---------:|" >> README.md
+echo "| Code | Description | Links |" >> README.md
+echo "|:----:|:-----------:|:-----:|" >> README.md
 find ./src -type f -name "index.ts" | while read path; do
   SOLUTION_PATH="$GITHUB_ROOT/$path"
   DIRECTORY_PATH="$(dirname $path)"

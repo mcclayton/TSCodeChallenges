@@ -34,8 +34,8 @@ yarn new
 
 ## Solutions
 
-| Code | Description | Solution |
-|:---------:|:---------:|:---------:|
+| Code | Description | Links |
+|:----:|:-----------:|:-----:|
 | [ArrayShuffle](https://github.com/mcclayton/TSCodeChallenges/tree/master/./src/ArrayShuffle/index.ts) | Shuffle a set of numbers without duplicates. | [Leetcode](https://leetcode.com/articles/shuffle-an-array/) |
 | [ImplementTrie](https://github.com/mcclayton/TSCodeChallenges/tree/master/./src/ImplementTrie/index.ts) | Implement a trie with `insert`, `search`, and `startsWith` methods. | [LeetCode](https://leetcode.com/articles/implement-trie-prefix-tree/) |
 | [LargestNumber](https://github.com/mcclayton/TSCodeChallenges/tree/master/./src/LargestNumber/index.ts) | Given a list of non negative integers, arrange them such that they form the largest number. | [Leetcode](https://leetcode.com/articles/largest-number/) [GeeksforGeeks](https://www.geeksforgeeks.org/given-an-array-of-numbers-arrange-the-numbers-to-form-the-biggest-number/) |
