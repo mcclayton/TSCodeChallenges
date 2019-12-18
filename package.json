@@ -37,6 +37,7 @@
     "fs-extra": "^8.1.0",
     "inquirer": "^7.0.1",
     "replace-in-file": "^5.0.2",
+    "tree-cli": "^0.6.4",
     "tslib": "~1.10.0"
   }
 }

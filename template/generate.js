@@ -54,7 +54,14 @@ inquirer
       created(toPath);
     });
 
-
+    require('tree-cli')({
+      base: newDir,
+      noreport: true,
+      l: 10,
+      f: true,
+    }).then(res => {
+      console.log("\n\nCreated From Template:\n", res.report);
+    });
   }).catch((err) => {
     console.log(`Error occurred: ${err}`);
   });
