@@ -15,7 +15,7 @@
  * Would return `true`, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
  */
 
-import { isLeaf, TreeNode } from './helpers';
+import { TreeNode } from '../types';
 
 /**
  * Definition for a binary tree node.
@@ -55,5 +55,7 @@ const hasPathSum = function(root: TreeNode, sum: number) {
   preOrderTraverse(root, 0);
   return res;
 };
+
+const isLeaf = (node: TreeNode) => (node && node.left === null && node.right === null);
 
 export default hasPathSum;
