@@ -1,5 +1,4 @@
 import isSubtree from '../index';
-
 /**
  *          3
  *         / \
