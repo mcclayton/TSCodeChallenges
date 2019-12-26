@@ -1,7 +1,7 @@
-import {{name}} from '../index';
+import {{camel_case_name}} from '../index';
 
-describe('{{name}}', () => {
+describe('{{camel_case_name}}', () => {
   it('works correctly', () => {
-    expect({{name}}()).toBe(undefined);
+    expect({{camel_case_name}}()).toBe(undefined);
   });
 });

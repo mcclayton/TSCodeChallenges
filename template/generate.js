@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs-extra');
 const path = require('path');
 const replace = require('replace-in-file');
+const camelcase = require('camelcase');
 
 const BASE_SRC_DIR = '__dirname/../src';
 const BASE_TEMPLATE_DIR = '__dirname/../template';
@@ -15,20 +16,22 @@ const TEMPLATE_FILES = [
 
 const created = (filePath) => console.log(`✅  Created: ${filePath}`);
 
-inquirer
-  .prompt([
-    {
-      type: 'input',
-      name: 'challenge_name',
-      default: 'NewExampleProblem',
-      message: "Name of challenge:",
-    }
-  ])
-  .then((answers) => {
-    const challengeName = answers['challenge_name'];
+const main = async () => {
+  try {
+    const answers = await inquirer.prompt([
+      {
+        type: 'input',
+        name: 'challenge_name',
+        default: 'NewExampleProblem',
+        message: "Name of challenge:",
+      }
+    ]);
+
+    const PASCAL_CHALLENGE_NAME = camelcase(answers['challenge_name'], { pascalCase: true });
+    const CAMEL_CHALLENGE_NAME = camelcase(PASCAL_CHALLENGE_NAME);
 
     // Create a new directory for the new challenge
-    const newDir = path.resolve(`${BASE_SRC_DIR}/${challengeName}`);
+    const newDir = path.resolve(`${BASE_SRC_DIR}/${PASCAL_CHALLENGE_NAME}`);
     if (!fs.existsSync(newDir)) {
       fs.mkdirSync(newDir);
       created(newDir);
@@ -45,23 +48,31 @@ inquirer
         toPath
       );
 
+      // Replace all instances of {{name}} with pascal cased challenge name
+      replace.sync({
+        files: toPath,
+        from: /{{pascal_case_name}}/g,
+        to: PASCAL_CHALLENGE_NAME,
+      });
       // Replace all instances of {{name}} with challenge name
       replace.sync({
         files: toPath,
-        from: /{{name}}/g,
-        to: challengeName,
+        from: /{{camel_case_name}}/g,
+        to: CAMEL_CHALLENGE_NAME,
       });
       created(toPath);
     });
 
-    require('tree-cli')({
+    const treeRes = await require('tree-cli')({
       base: newDir,
       noreport: true,
       l: 10,
       f: true,
-    }).then(res => {
-      console.log("\n\nCreated From Template:\n", res.report);
     });
-  }).catch((err) => {
+    console.log("\n\nCreated From Template:\n", treeRes.report);
+  } catch (err) {
     console.log(`Error occurred: ${err}`);
-  });
+  }
+}
+
+main();

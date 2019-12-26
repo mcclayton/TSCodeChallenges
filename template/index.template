@@ -1,8 +1,8 @@
 /**
- * {{name}}
+ * {{pascal_case_name}}
  */
-const {{name}} = function() {
+const {{camel_case_name}} = function() {
 
 };
 
-export default {{name}};
+export default {{camel_case_name}};
