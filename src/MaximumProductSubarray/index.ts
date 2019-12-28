@@ -12,7 +12,7 @@
 const maximumProductSubarray = function(nums: number[]) {
   // Traverse array from left to right keeping two variables minVal and maxVal
   // which represents the minimum and maximum product value till the
-  // ith index of the array.
+  // ith index of the array. This enables O(n) instead of O(n^2) time complexity
   let minVal = nums[0];
   let maxVal = nums[0];
   let maxProduct = nums[0];
