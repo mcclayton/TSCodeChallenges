@@ -30,7 +30,7 @@ import { TreeNode } from '../types';
  * @param {number} sum
  * @return {boolean}
  */
-const hasPathSum = function(root: TreeNode, sum: number) {
+const hasPathSum = function(root: TreeNode<number>, sum: number) {
   // If initial tree is empty, return false as there are no leaf nodes
   if (root == null)
     return false;
@@ -38,7 +38,7 @@ const hasPathSum = function(root: TreeNode, sum: number) {
   let res = false;
   // Perform a preorder traversal, passing the sum of the path-so-far down the
   // path. Once we reach a leaf node, we update `res`.
-  function preOrderTraverse(node: TreeNode, sumSoFar = 0) {
+  function preOrderTraverse(node: TreeNode<number>, sumSoFar = 0) {
     if (node == null) {
       return;
     }
@@ -56,6 +56,6 @@ const hasPathSum = function(root: TreeNode, sum: number) {
   return res;
 };
 
-const isLeaf = (node: TreeNode) => (node && node.left === null && node.right === null);
+const isLeaf = (node: TreeNode<number>) => (node && node.left === null && node.right === null);
 
 export default hasPathSum;

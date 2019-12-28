@@ -26,10 +26,10 @@ import { TreeNode } from '../types';
  * @param {TreeNode} t
  * @return {boolean}
  */
-var isSubtree = function(s: TreeNode, t: TreeNode) {
+var isSubtree = function(s: TreeNode<number>, t: TreeNode<number>) {
   const sTraversalMap: ITraversalMap= {};
 
-  const inOrder = (root: TreeNode, map: ITraversalMap | null) => {
+  const inOrder = (root: TreeNode<number>, map: ITraversalMap | null) => {
     if (root === null) {
       return "";
     }

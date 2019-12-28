@@ -14,11 +14,11 @@ import { TreeNode } from '../types';
  * @param {number} k
  * @return {number}
  */
-const kthSmallest = function(root: TreeNode, k: number) {
+const kthSmallest = function(root: TreeNode<number>, k: number) {
   const arr: number[] = [];
   // Traverse the BST in-order and place elements into array
   // This results in an array sorted from least to greatest
-  const inOrder = (node: TreeNode, resArr: number[]) => {
+  const inOrder = (node: TreeNode<number>, resArr: number[]) => {
     if (node === null) {
       return;
     }
