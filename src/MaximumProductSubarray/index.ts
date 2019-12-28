@@ -10,15 +10,15 @@
  * @return {number}
  */
 const maximumProductSubarray = function(nums: number[]) {
-  // Variables to store maximum and minimum
-  // product till ith index.
+  // Traverse array from left to right keeping two variables minVal and maxVal
+  // which represents the minimum and maximum product value till the
+  // ith index of the array.
   let minVal = nums[0];
   let maxVal = nums[0];
-
   let maxProduct = nums[0];
 
-  for (let i = 1; i < nums.length; i++) {
-    // When multiplied by -ve number,
+  for (let i=1; i < nums.length; i++) {
+    // When multiplied by negative number, swap min/max
     // maxVal becomes minVal
     // and minVal becomes maxVal.
     if (nums[i] < 0) {
