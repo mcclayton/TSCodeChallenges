@@ -4,7 +4,7 @@ const path = require('path');
 const replace = require('replace-in-file');
 const camelcase = require('camelcase');
 
-const BASE_SRC_DIR = '__dirname/../src';
+const BASE_SRC_DIR = '__dirname/../src/solutions';
 const BASE_TEMPLATE_DIR = '__dirname/../template';
 
 const TEMPLATE_FILES = [
