@@ -1,4 +1,4 @@
-import { LinkedListNode } from '../types';
+import { LinkedListNode } from '../../types';
 
 /**
  * PalindromeLinkedList

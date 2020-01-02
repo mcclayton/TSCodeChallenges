@@ -7,7 +7,7 @@
  * Note that an empty string is also considered valid.
  */
 
-import Stack from '../data_structures/Stack';
+import Stack from '../../data_structures/Stack';
 
 /**
  * @param {string} s

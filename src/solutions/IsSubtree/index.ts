@@ -19,7 +19,7 @@
  * Would return `true`, as t has the same structure and node values with a subtree of s.
  */
 
-import { TreeNode } from '../types';
+import { TreeNode } from '../../types';
 
 /**
  * @param {TreeNode} s

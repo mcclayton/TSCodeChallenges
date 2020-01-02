@@ -6,7 +6,7 @@
  * }
  */
 
-import { TreeNode } from '../types';
+import { TreeNode } from '../../types';
 
 /**
  * KthSmallestBST
