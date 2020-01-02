@@ -54,5 +54,4 @@ class TreeNode {
   }
 }
 
-
 export default buildTree;
