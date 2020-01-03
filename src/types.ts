@@ -1,10 +1,10 @@
-export interface TreeNode<T> {
+export interface TreeNode<T = any> {
   left: TreeNode<T> | null,
   right: TreeNode<T> | null,
-  val: T | any
+  val: T
 }
 
-export interface LinkedListNode<T> {
+export interface LinkedListNode<T = any> {
   next: LinkedListNode<T> | null,
-  val: T | any
+  val: T
 }

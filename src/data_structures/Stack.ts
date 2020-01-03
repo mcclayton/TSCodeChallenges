@@ -1,10 +1,10 @@
-export default class Stack {
-  stack: any[];
+export default class Stack<T = any> {
+  stack: T[];
   constructor() {
     this.stack = [];
   }
 
-  push(val: any) {
+  push(val: T) {
     return this.stack.push(val);
   }
 
