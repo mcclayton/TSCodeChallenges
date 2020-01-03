@@ -25,8 +25,6 @@ find $SOLUTIONS_DIR -type f -name "index.ts" | while read path; do
 done
 
 # Print Out Resulting README
-echo "GENERATED NEW README:"
-echo -e "---------------------\n\n"
-cat README.md | while read line; do
-  echo "> $line"
-done
+echo "✅  Successfully Generated README"
+echo -e "\nℹ️  README Diff:\n"
+git diff README.md

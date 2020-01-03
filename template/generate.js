@@ -73,6 +73,6 @@ const main = async () => {
   } catch (err) {
     console.log(`Error occurred: ${err}`);
   }
-}
+};
 
 main();
