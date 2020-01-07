@@ -24,6 +24,12 @@ const main = async () => {
         name: 'challenge_name',
         default: 'NewExampleProblem',
         message: "Name of challenge:",
+      },
+      {
+        type: 'input',
+        name: 'challenge_prompt',
+        default: '',
+        message: "Question Prompt:",
       }
     ]);
 
@@ -48,18 +54,20 @@ const main = async () => {
         toPath
       );
 
-      // Replace all instances of {{name}} with pascal cased challenge name
-      replace.sync({
-        files: toPath,
-        from: /{{pascal_case_name}}/g,
-        to: PASCAL_CHALLENGE_NAME,
+      const replacements = [
+        { from: /{{challenge_prompt}}/g, to: answers['challenge_prompt'] },
+        { from: /{{pascal_case_name}}/g, to: PASCAL_CHALLENGE_NAME },
+        { from: /{{camel_case_name}}/g, to: CAMEL_CHALLENGE_NAME },
+      ];
+
+      replacements.forEach((rep) => {
+        replace.sync({
+          files: toPath,
+          from: rep.from,
+          to: rep.to,
+        });
       });
-      // Replace all instances of {{name}} with challenge name
-      replace.sync({
-        files: toPath,
-        from: /{{camel_case_name}}/g,
-        to: CAMEL_CHALLENGE_NAME,
-      });
+
       created(toPath);
     });
 
