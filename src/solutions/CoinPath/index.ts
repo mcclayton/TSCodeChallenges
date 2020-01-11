@@ -7,7 +7,7 @@
  * @param nums
  */
 const coinPath = function(nums: number[][]) {
-  const memo: MemoizedResults= {};
+  const memo: MemoizedResults = {};
   const size = nums.length;
 
   const countPaths = (i: number, j: number, coins: number): number => {
@@ -28,7 +28,10 @@ const coinPath = function(nums: number[][]) {
       return 1;
     }
 
+    // Result is the summation of all the recursive valid paths of i+1 and j+1
+    // direction decisions
     const result = countPaths(i + 1, j, remainingCoins) + countPaths(i, j + 1, remainingCoins);
+    // Memoize the result
     memo[memoKey(i, j, coins)] = result;
     return result;
   };
