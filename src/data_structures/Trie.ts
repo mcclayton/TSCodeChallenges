@@ -1,7 +1,7 @@
 export default class Trie {
-  root: Node;
+  root: TrieNode;
   constructor() {
-    this.root = new Node();
+    this.root = new TrieNode();
   }
 
   insert(word: string) {
@@ -12,7 +12,7 @@ export default class Trie {
       if (!node.nodeMap[currLetter]) {
         // The letter is not present in the trie
         // create and add a new node
-        node.nodeMap[currLetter] = new Node();
+        node.nodeMap[currLetter] = new TrieNode(currLetter);
       }
       // Traverse down to the next node
       node = node.nodeMap[currLetter];
@@ -59,16 +59,16 @@ export default class Trie {
 
 
 interface INodeMap {
-  [key: string]: Node;
+  [key: string]: TrieNode;
 }
 
-class Node {
+class TrieNode {
   nodeMap: INodeMap;
-  letter: string | null;
+  value: string | null;
   end: boolean;
 
-  constructor(letter?: string) {
-    this.letter = letter || null;
+  constructor(value?: string) {
+    this.value = value || null;
     this.nodeMap = {};
     this.end = false;
   }
