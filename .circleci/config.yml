@@ -19,6 +19,12 @@ jobs:
           paths:
             - ~/TSCodeChallenges/node_modules
       - run:
+          name: Get CPU Information
+          command: |
+            cat /proc/cpuinfo | grep processor | wc -l
+            cat /proc/cpuinfo | grep 'core id'
+
+      - run:
           name: Run JS Tests
           command: yarn test --maxWorkers=2
 workflows:
