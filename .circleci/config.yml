@@ -21,6 +21,8 @@ jobs:
       - run:
           name: Run JS Tests
           command: yarn test
+          environment:
+            - NODE_OPTIONS: --max_old_space_size=8192
 workflows:
   version: 2
   build_and_test:
