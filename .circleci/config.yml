@@ -21,10 +21,13 @@ jobs:
       - run:
           name: Get CPU Information
           command: |
-            echo nproc
+            nproc
             cat /proc/cpuinfo | grep processor | wc -l
             cat /proc/cpuinfo | grep 'core id'
             cat /sys/fs/cgroup/cpu/cpu.shares
+            cat /sys/fs/cgroup/cpu/cpu.cfs_quota_us
+            cat /sys/fs/cgroup/cpu/cpu.cfs_period_us
+            cat /sys/fs/cgroup/memory/memory.limit_in_bytes
 
       - run:
           name: Run JS Tests
