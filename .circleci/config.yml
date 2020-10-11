@@ -21,6 +21,7 @@ jobs:
       - run:
           name: Get CPU Information
           command: |
+            echo nproc
             cat /proc/cpuinfo | grep processor | wc -l
             cat /proc/cpuinfo | grep 'core id'
 
