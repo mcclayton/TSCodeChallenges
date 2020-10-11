@@ -24,6 +24,7 @@ jobs:
             echo nproc
             cat /proc/cpuinfo | grep processor | wc -l
             cat /proc/cpuinfo | grep 'core id'
+            cat /sys/fs/cgroup/cpu/cpu.shares
 
       - run:
           name: Run JS Tests
