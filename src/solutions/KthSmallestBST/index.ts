@@ -5,7 +5,6 @@
  *     this.left = this.right = null;
  * }
  */
-
 import { TreeNode } from '../../types';
 
 /**
@@ -14,7 +13,7 @@ import { TreeNode } from '../../types';
  * @param {number} k
  * @return {number}
  */
-const kthSmallest = function(root: TreeNode<number>, k: number) {
+const kthSmallest = function (root: TreeNode<number>, k: number) {
   const arr: number[] = [];
   // Traverse the BST in-order and place elements into array
   // This results in an array sorted from least to greatest
@@ -25,12 +24,12 @@ const kthSmallest = function(root: TreeNode<number>, k: number) {
     inOrder(node.left, resArr);
     resArr.push(node.val);
     inOrder(node.right, resArr);
-  }
+  };
   inOrder(root, arr);
 
   // Since the array is sorted, to find the kth smallest number we only need
   // to index into the k-1 position of the array
-  return arr[k-1];
+  return arr[k - 1];
 };
 
 export default kthSmallest;

@@ -11,7 +11,13 @@ const combinationSum = function (candidates: number[], target: number) {
   return resultList;
 };
 
-const backtrack = function (resultList: number[][], pathSoFar: number[], candidates: number[], remaining: number, start: number) {
+const backtrack = function (
+  resultList: number[][],
+  pathSoFar: number[],
+  candidates: number[],
+  remaining: number,
+  start: number,
+) {
   if (remaining < 0) {
     // Exceeded target, backtrack
     return;
@@ -26,6 +32,6 @@ const backtrack = function (resultList: number[][], pathSoFar: number[], candida
       pathSoFar.pop();
     }
   }
-}
+};
 
 export default combinationSum;

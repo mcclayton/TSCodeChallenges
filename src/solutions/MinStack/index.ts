@@ -18,13 +18,13 @@ class MinStack {
       this.minStack.push(x);
     } else {
       // With each push, always push the current minimum to the minStack
-      this.minStack.push(Math.min(x, this.getMin()))
+      this.minStack.push(Math.min(x, this.getMin()));
     }
     this.stack.push(x);
   }
 
   pop(): void {
-    this.minStack.pop()
+    this.minStack.pop();
     this.stack.pop();
   }
 

@@ -13,7 +13,7 @@
  *    15   7
  *
  */
-const buildTree = function(preorder: number[], inorder: number[]) {
+const buildTree = function (preorder: number[], inorder: number[]) {
   // Keep track of index into preorder array
   let preIndex = 0;
 
@@ -35,7 +35,7 @@ const buildTree = function(preorder: number[], inorder: number[]) {
     currNode.left = buildSubTree(leftSubValues);
     currNode.right = buildSubTree(rightSubValues);
     return currNode;
-  }
+  };
 
   const rootNode = buildSubTree(inorder);
   // We return the built root node in O(n^2) time

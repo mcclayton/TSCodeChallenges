@@ -4,7 +4,7 @@ import { LinkedListNode } from '../../types';
  * PalindromeLinkedList
  * Given a singly linked list, determine if it is a palindrome in O(n) time and O(1) space.
  */
-const palindromeLinkedList = function(head: LinkedListNode<number>) {
+const palindromeLinkedList = function (head: LinkedListNode<number>) {
   // Empty and single item list is a palindrome
   if (head == null || head.next == null) {
     return true;
@@ -39,7 +39,7 @@ const palindromeLinkedList = function(head: LinkedListNode<number>) {
   // First half of list
   let firstHalf = head;
   // Properly get the beginning of the second list
-  let secondHalf = (p2 === null ? p1 : p2);
+  let secondHalf = p2 === null ? p1 : p2;
 
   // Compare two sublists now
   while (secondHalf !== null) {

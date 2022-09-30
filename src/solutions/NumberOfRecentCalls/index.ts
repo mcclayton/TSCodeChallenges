@@ -29,6 +29,6 @@ class RecentCounter {
     // time window
     return this.pings.length;
   }
-};
+}
 
 export default RecentCounter;

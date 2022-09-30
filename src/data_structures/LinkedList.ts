@@ -5,7 +5,7 @@ export class ListNode<T = any> {
     this.next = null;
     this.val = val;
   }
-};
+}
 
 export default class LinkedList<T = any> {
   root: ListNode<T> | null;
@@ -37,10 +37,10 @@ export default class LinkedList<T = any> {
   toArray() {
     const values = [];
     let curr = this.root;
-    while(curr !== null) {
+    while (curr !== null) {
       values.push(curr.val);
       curr = curr.next;
     }
     return values;
   }
-};
+}

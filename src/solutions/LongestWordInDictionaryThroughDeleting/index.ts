@@ -14,8 +14,8 @@
 // K = length of s
 // Time Complexity: O(N * M * K)
 // Since for every word N, we search through every letter M. For every letter M we search in s of length K
-var findLongestWord = function(s: string, d: string[]) {
-  let result = "";
+var findLongestWord = function (s: string, d: string[]) {
+  let result = '';
   for (let i = 0; i < d.length; i++) {
     const word = d[i];
 

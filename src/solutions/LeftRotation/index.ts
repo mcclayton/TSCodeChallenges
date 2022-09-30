@@ -6,8 +6,7 @@
  */
 
 const rotateLeft = (arr: number[], rotation: number) => {
-  if (!arr || arr.length === 0)
-    return arr;
+  if (!arr || arr.length === 0) return arr;
 
   const arrLength = arr.length;
   // It is easier to shift the array when dealing with right shift instead of

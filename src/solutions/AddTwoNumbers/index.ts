@@ -22,7 +22,7 @@ import LinkedList, { ListNode } from '../../data_structures/LinkedList';
  * @param {ListNode} l2
  * @return {ListNode}
  */
-var addTwoNumbers = function(l1: ListNode<number>, l2: ListNode<number>) {
+var addTwoNumbers = function (l1: ListNode<number>, l2: ListNode<number>) {
   const resultList = new LinkedList();
   // Keep track of the sum's carry-over value
   // Since the linkedlists are in reverse, we can just keep moving the carry-over as we traverse the
@@ -40,7 +40,7 @@ var addTwoNumbers = function(l1: ListNode<number>, l2: ListNode<number>) {
     // Compute the carry-over value to move to the next node values
     carry = sum >= 10 ? 1 : 0;
     // The digit to add to the list is the sum or the (sum - 10) if there is a carry-over value
-    const digitToAdd = sum >= 10 ? (sum - 10) : sum;
+    const digitToAdd = sum >= 10 ? sum - 10 : sum;
     resultList.push(digitToAdd);
 
     // Continue traversing if possible

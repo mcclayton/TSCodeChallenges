@@ -51,7 +51,7 @@ export default class TrieWithWildcard {
     // The full prefix was in the tree
     return true;
   }
-};
+}
 
 const searchWithWildcards = (root: Node, word: string) => {
   let node = root;
@@ -101,4 +101,3 @@ class Node {
     this.end = false;
   }
 }
-

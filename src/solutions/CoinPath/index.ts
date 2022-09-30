@@ -6,7 +6,7 @@
  *
  * @param nums
  */
-const coinPath = function(nums: number[][]) {
+const coinPath = function (nums: number[][]) {
   const memo: MemoizedResults = {};
   const size = nums.length;
 
@@ -30,7 +30,9 @@ const coinPath = function(nums: number[][]) {
 
     // Result is the summation of all the recursive valid paths of i+1 and j+1
     // direction decisions
-    const result = countPaths(i + 1, j, remainingCoins) + countPaths(i, j + 1, remainingCoins);
+    const result =
+      countPaths(i + 1, j, remainingCoins) +
+      countPaths(i, j + 1, remainingCoins);
     // Memoize the result
     memo[memoKey(i, j, coins)] = result;
     return result;
@@ -44,7 +46,7 @@ const memoKey = (...args: any[]) => {
 };
 
 interface MemoizedResults {
-  [key: string]: number
-};
+  [key: string]: number;
+}
 
 export default coinPath;

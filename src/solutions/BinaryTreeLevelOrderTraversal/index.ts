@@ -1,5 +1,5 @@
-import { TreeNode } from '../../types';
 import Queue from '../../data_structures/Queue';
+import { TreeNode } from '../../types';
 
 /**
  * BinaryTreeLevelOrderTraversal
@@ -19,7 +19,7 @@ import Queue from '../../data_structures/Queue';
  *  [15,7]
  * ]
  */
-const levelOrderTraversal = function(root: TreeNode<number>) {
+const levelOrderTraversal = function (root: TreeNode<number>) {
   const levelOrder: number[][] = [];
 
   // Early return if no root provided
@@ -33,7 +33,7 @@ const levelOrderTraversal = function(root: TreeNode<number>) {
     } else {
       levelOrder[level].push(val);
     }
-  }
+  };
 
   const queue = new Queue<NodeWithLevel>();
 
@@ -64,8 +64,8 @@ const nodeWithLevel = (node: TreeNode<number> | null, level: number) => ({
 });
 
 interface NodeWithLevel {
-  node: TreeNode<number> | null,
-  level: number
+  node: TreeNode<number> | null;
+  level: number;
 }
 
 export default levelOrderTraversal;

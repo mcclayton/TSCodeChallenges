@@ -1,0 +1,13 @@
+{
+  "semi": true,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "printWidth": 80,
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "^(pages|deprecated|e2e|logger|reactQuery|shared|store|stories|theme|config|lang\\.utils|monitoring\\.utils|SnackbarProvider|ProductionPreviewBanner|AppErrorBoundary)(/(.*))?$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

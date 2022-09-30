@@ -9,7 +9,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const maximumProductSubarray = function(nums: number[]) {
+const maximumProductSubarray = function (nums: number[]) {
   // Traverse array from left to right keeping two variables minVal and maxVal
   // which represents the minimum and maximum product value till the
   // ith index of the array. This enables O(n) instead of O(n^2) time complexity
@@ -17,7 +17,7 @@ const maximumProductSubarray = function(nums: number[]) {
   let maxVal = nums[0];
   let maxProduct = nums[0];
 
-  for (let i=1; i < nums.length; i++) {
+  for (let i = 1; i < nums.length; i++) {
     // When multiplied by negative number, swap min/max
     // maxVal becomes minVal
     // and minVal becomes maxVal.

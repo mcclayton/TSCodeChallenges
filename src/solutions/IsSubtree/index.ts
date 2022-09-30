@@ -18,7 +18,6 @@
  *
  * Would return `true`, as t has the same structure and node values with a subtree of s.
  */
-
 import { TreeNode } from '../../types';
 
 /**
@@ -26,25 +25,25 @@ import { TreeNode } from '../../types';
  * @param {TreeNode} t
  * @return {boolean}
  */
-var isSubtree = function(s: TreeNode<number>, t: TreeNode<number>) {
-  const sTraversalMap: ITraversalMap= {};
+var isSubtree = function (s: TreeNode<number>, t: TreeNode<number>) {
+  const sTraversalMap: ITraversalMap = {};
 
   const inOrder = (root: TreeNode<number>, map: ITraversalMap | null) => {
     if (root === null) {
-      return "";
+      return '';
     }
-    let str = "(";
+    let str = '(';
     str += inOrder(root.left, map);
     str += root.val;
     str += inOrder(root.right, map);
-    str += ")";
+    str += ')';
     // Finished traversal of subtree -- add the traversal path to the map if one
     // is provided
     if (map) {
       map[str] = true;
     }
     return str;
-  }
+  };
 
   // Generate hash map of all in-order traversals of `s`
   inOrder(s, sTraversalMap);

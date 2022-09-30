@@ -16,17 +16,17 @@
  * Insert: O(N) (Takes O(logN) to find index to insert, but JS array insertion with splice is linear.
  * Retrieve kth max O(1)
  */
-const KthLargest = function(k: number, nums: number[]) {
+const KthLargest = function (k: number, nums: number[]) {
   this.k = k;
   // Perform an original sort of numbers in O(N*log(N))
-  this.nums = nums.sort((a: number, b: number) => (a - b));
+  this.nums = nums.sort((a: number, b: number) => a - b);
 };
 
 /**
  * @param {number} val
  * @return {number}
  */
-KthLargest.prototype.add = function(val: number) {
+KthLargest.prototype.add = function (val: number) {
   this.nums.splice(binaryFindInsertionIdx(this.nums, val), 0, val);
   return this.nums[this.nums.length - this.k];
 };

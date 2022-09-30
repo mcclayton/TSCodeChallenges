@@ -24,7 +24,7 @@ const twoSum = function (nums: number[], target: number) {
 };
 
 interface IHash {
-  [key: number]: number
-};
+  [key: number]: number;
+}
 
 export default twoSum;

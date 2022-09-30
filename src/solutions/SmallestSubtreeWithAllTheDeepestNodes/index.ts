@@ -11,7 +11,7 @@ import { TreeNode } from '../../types';
  * @param {TreeNode} root
  * @return {TreeNode}
  */
-const subtreeWithAllDeepest = function(root: TreeNode) {
+const subtreeWithAllDeepest = function (root: TreeNode) {
   const dfs = (node: TreeNode, level = 0): Result => {
     if (node === null) {
       return new Result(node, level);
@@ -36,7 +36,7 @@ const subtreeWithAllDeepest = function(root: TreeNode) {
       // Doesn't matter if we use rightSub.level or leftSub.level since they are equal
       return new Result(node, rightSub.level);
     }
-  }
+  };
 
   return dfs(root).node;
 };

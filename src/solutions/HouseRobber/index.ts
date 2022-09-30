@@ -13,7 +13,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const rob = function(nums: number[]) {
+const rob = function (nums: number[]) {
   const memo: MemoizedResults = {};
   // Recursive relation:
   // A robber has 2 options:
@@ -41,7 +41,10 @@ const rob = function(nums: number[]) {
     // Get the max of robbing either:
     // A) Robbery of current house + loot from houses before the previous
     // B) Robbery of current house + loot from houses before the previous
-    const result = Math.max(getMaxRob(nums, i - 2) + nums[i], getMaxRob(nums, i - 1));
+    const result = Math.max(
+      getMaxRob(nums, i - 2) + nums[i],
+      getMaxRob(nums, i - 1),
+    );
     // Memoize the result of this sub-problem
     memo[i] = result;
     return result;
@@ -51,7 +54,7 @@ const rob = function(nums: number[]) {
 };
 
 interface MemoizedResults {
-  [key: number]: number
-};
+  [key: number]: number;
+}
 
 export default rob;

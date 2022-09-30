@@ -19,4 +19,4 @@ export default class Stack<T = any> {
   isEmpty() {
     return this.stack.length === 0;
   }
-};
+}

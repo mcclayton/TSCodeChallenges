@@ -13,7 +13,7 @@
  * @param {string[]} folder
  * @return {string[]}
  */
-const removeSubFolders = function(folder: string[]) {
+const removeSubFolders = function (folder: string[]) {
   const results: string[] = [];
   const trie = new Trie();
 
@@ -23,7 +23,7 @@ const removeSubFolders = function(folder: string[]) {
   }
   const root = trie.root;
 
-  const traverse = (node: TrieNode, path = "") => {
+  const traverse = (node: TrieNode, path = '') => {
     if (node.end) {
       // Join the new sub-path onto the path traversed so far
       return path + '/' + node.value;
@@ -71,7 +71,7 @@ class Trie {
     }
     node.end = true;
   }
-};
+}
 
 interface INodeMap {
   [key: string]: TrieNode;
@@ -88,6 +88,5 @@ class TrieNode {
     this.end = false;
   }
 }
-
 
 export default removeSubFolders;

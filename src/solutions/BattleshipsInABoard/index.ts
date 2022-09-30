@@ -20,14 +20,18 @@
  * @param {character[][]} board
  * @return {number}
  */
-var countBattleships = function(board: string[][]) {
+var countBattleships = function (board: string[][]) {
   let count = 0;
 
   // Simply, only count an `X` as a new ship if there is no
   // X to the left, right, or above
   for (let i = 0; i < board.length; i++) {
     for (let j = 0; j < board[0].length; j++) {
-      if (board[i][j] == 'X' && (i == 0 || board[i - 1][j] == '.') && (j == 0 || board[i][j - 1] == '.')) {
+      if (
+        board[i][j] == 'X' &&
+        (i == 0 || board[i - 1][j] == '.') &&
+        (j == 0 || board[i][j - 1] == '.')
+      ) {
         count++;
       }
     }

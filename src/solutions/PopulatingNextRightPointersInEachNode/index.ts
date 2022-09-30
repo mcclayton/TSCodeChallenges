@@ -1,9 +1,9 @@
 export interface TreeNode<T = any> {
-  left: TreeNode<T> | null,
-  right: TreeNode<T> | null,
-  next: TreeNode<T> | null,
-  val: T
-};
+  left: TreeNode<T> | null;
+  right: TreeNode<T> | null;
+  next: TreeNode<T> | null;
+  val: T;
+}
 
 /**
  * // Definition for a Node.
@@ -52,7 +52,7 @@ const connect = function (root: TreeNode) {
     // Recurse down the left subtree, then right subtree decrementing the level
     connectOnLevel(node.left, level - 1);
     connectOnLevel(node.right, level - 1);
-  }
+  };
 
   for (let i = 0; i < heightOfTree; i++) {
     // For each level, reset the temp node

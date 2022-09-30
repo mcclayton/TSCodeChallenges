@@ -7,7 +7,7 @@ export default class Trie {
   insert(word: string) {
     let node = this.root;
     // For every letter in the string
-    for (let i=0; i < word.length; i++) {
+    for (let i = 0; i < word.length; i++) {
       const currLetter = word[i];
       if (!node.nodeMap[currLetter]) {
         // The letter is not present in the trie
@@ -55,8 +55,7 @@ export default class Trie {
     // The full prefix was in the tree
     return true;
   }
-};
-
+}
 
 interface INodeMap {
   [key: string]: TrieNode;

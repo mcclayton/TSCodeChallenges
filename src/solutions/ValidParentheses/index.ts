@@ -6,18 +6,17 @@
  * Open brackets must be closed in the correct order.
  * Note that an empty string is also considered valid.
  */
-
 import Stack from '../../data_structures/Stack';
 
 /**
  * @param {string} s
  * @return {boolean}
  */
-const isValid = function(s: string) {
+const isValid = function (s: string) {
   // Empty string is balanced
   if (s.length === 0) {
     return true;
-  } else if ((s.length % 2) !== 0) {
+  } else if (s.length % 2 !== 0) {
     // If odd number of characters, then expression is unbalanced
     return false;
   }
@@ -25,7 +24,7 @@ const isValid = function(s: string) {
   const stack = new Stack();
 
   const values = s.split('');
-  for (let i=0; i<values.length; i++) {
+  for (let i = 0; i < values.length; i++) {
     const val = values[i];
     if (val === '{' || val === '[' || val === '(') {
       // If the character is an opening bracket, push it to the stack
@@ -44,7 +43,7 @@ const isValid = function(s: string) {
         }
       }
     }
-  };
+  }
 
   // If the stack is not empty, then there is an extra opening bracket
   return stack.isEmpty();
@@ -57,7 +56,7 @@ interface IParens {
 const PAREN_COMPLIMENTS: IParens = {
   '}': '{',
   ')': '(',
-  ']': '['
+  ']': '[',
 };
 
 export default isValid;

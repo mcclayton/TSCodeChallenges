@@ -14,7 +14,7 @@ import { TreeNode } from '../../types';
  * @param {TreeNode} root
  * @return {number}
  */
-const maxDepth = function(root: TreeNode) {
+const maxDepth = function (root: TreeNode) {
   return getHeight(root, 0);
 };
 
@@ -29,6 +29,6 @@ const getHeight = (node: TreeNode | null, level = 0): number => {
 
   // As we pop off the recursion stack frames, we return the higher of the two nodes
   return Math.max(leftH, rightH);
-}
+};
 
 export default maxDepth;

@@ -60,8 +60,7 @@ export default class Trie {
     // The full prefix was in the tree
     return true;
   }
-};
-
+}
 
 interface INodeMap {
   [key: string]: Node;
@@ -78,4 +77,3 @@ class Node {
     this.end = false;
   }
 }
-

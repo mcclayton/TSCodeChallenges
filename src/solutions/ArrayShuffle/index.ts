@@ -6,8 +6,8 @@
  * @param {number[]} nums
  * Time complexity of the Fisher-Yates shuffle is O(n).
  */
-const shuffle = function(nums: number[]) {
-  for (let i=0; i < nums.length; i++) {
+const shuffle = function (nums: number[]) {
+  for (let i = 0; i < nums.length; i++) {
     // Choose a random index from the current index (inclusively) to the
     // last index in the array. Swap the elements and increment the index.
     // It is important to allow swapping with the same index or the randomness
@@ -28,6 +28,6 @@ function getRandomInt(min: number, max: number) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+}
 
 export default shuffle;

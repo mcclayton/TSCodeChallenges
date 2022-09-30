@@ -6,7 +6,7 @@
 function firstMissingPositive(nums: number[]): number {
   let map: Record<number, boolean> = {};
   nums.forEach((n) => {
-    if (n>=0 && n <= nums.length) {
+    if (n >= 0 && n <= nums.length) {
       map[n] = true;
     }
   });
@@ -18,12 +18,12 @@ function firstMissingPositive(nums: number[]): number {
   // If no, that *index* is the value of the first positive integer missing
   // If all index values are in the original array, that means that the original array
   // contained all numbers from (1 - N), so N+1 is the first missing positive value (Where N=Length of array)
-  for(let i=1; i<=nums.length; i++) {
+  for (let i = 1; i <= nums.length; i++) {
     if (!map[i]) {
       return i;
     }
   }
   return nums.length + 1;
-};
+}
 
 export default firstMissingPositive;

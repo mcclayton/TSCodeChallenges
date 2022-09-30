@@ -14,7 +14,6 @@
  *
  * Would return `true`, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
  */
-
 import { TreeNode } from '../../types';
 
 /**
@@ -25,15 +24,14 @@ import { TreeNode } from '../../types';
  * }
  */
 
- /**
+/**
  * @param {TreeNode} root
  * @param {number} sum
  * @return {boolean}
  */
-const hasPathSum = function(root: TreeNode<number>, sum: number) {
+const hasPathSum = function (root: TreeNode<number>, sum: number) {
   // If initial tree is empty, return false as there are no leaf nodes
-  if (root == null)
-    return false;
+  if (root == null) return false;
 
   let res = false;
   // Perform a preorder traversal, passing the sum of the path-so-far down the
@@ -56,6 +54,7 @@ const hasPathSum = function(root: TreeNode<number>, sum: number) {
   return res;
 };
 
-const isLeaf = (node: TreeNode<number>) => (node && node.left === null && node.right === null);
+const isLeaf = (node: TreeNode<number>) =>
+  node && node.left === null && node.right === null;
 
 export default hasPathSum;
